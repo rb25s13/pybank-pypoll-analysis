@@ -75,9 +75,12 @@ printoutput = (f'Financial Analysis\n'
 
 # print define out above
 print(printoutput)
-
+# define output folder name
+save_path = 'Analysis'
+# join folder path and file path
+outputdatapath = os.path.join(save_path, 'Financial_Analysis.txt')
 # open/make the text file named Financial_Analysis
-file = open('Financial_Analysis.txt', 'w')
+file = open(outputdatapath, 'w')
 # write output to the text file
 file.write(f'{printoutput}')
 # close the file
