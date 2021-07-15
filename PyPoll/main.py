@@ -6,7 +6,6 @@
 # The winner of the election based on popular vote.
 
 
-
 # import modules for data path functions and csv read/writing
 import os
 import csv
@@ -21,8 +20,6 @@ correy = []
 li = []
 otooley = []
 
-candidatelist = ['Kahn', 'Correy', 'Li', "O'Tooley"]
-
 # open csv file
 with open(polldatapath) as csvfile:
 
@@ -36,39 +33,48 @@ with open(polldatapath) as csvfile:
     for row in csvreader:
         # add vote to vote list
         votes.append(row[0])
-
+        # if vote is for Khan, add to list
         if row[2] == 'Khan':
             khan.append(row)
-
+        # if vote is for correy, add to list
         if row[2] == 'Correy':
             correy.append(row)
-
+        # if vote is for Li, add to list
         if row[2] == 'Li':
             li.append(row)
-
+        # if vote is for O'Tooley, add to list
         if row[2] == "O'Tooley":
             otooley.append(row)
 
+# count the total votes and total for each candidate
 totalvotes = len(votes)
 cktotal = len(khan)
 cctotal = len(correy)
 cltotal = len(li)
 cttotal = len(otooley)
 
+# calculate the percentages using the totals above, format for one decimal place
 ckpercent = (cktotal / totalvotes) * 100
-formavgck = round(ckpercent, 3)
+formavgck = round(ckpercent, 1)
 ccpercent = (cctotal / totalvotes) * 100
-formavgcc = round(ccpercent, 3)
+formavgcc = round(ccpercent, 1)
 clpercent = (cltotal / totalvotes) * 100
-formavgcl = round(clpercent, 3)
+formavgcl = round(clpercent, 1)
 ctpercent = (cttotal / totalvotes) * 100
-formavgct = round(ctpercent, 3)
+formavgct = round(ctpercent, 1)
 
+# list to hold the candidate names
+candidatelist = ['Khan', 'Correy', 'Li', "O'Tooley"]
+# list to hold the results totals
 results = [cktotal, cctotal, cltotal, cttotal]
+# the highest total in the results list
 mostvotes = max(results)
+# position of candidate in the results list
 windex = results.index(mostvotes)
+# match the windex to the candidate list
 winner = candidatelist[windex]
 
+# define the output that needs to print
 printoutput = (f'Election Results\n'
                 f'----------------------------\n'
                 f'Total Votes: {totalvotes}\n'
@@ -82,7 +88,11 @@ printoutput = (f'Election Results\n'
                 f'----------------------------\n'
 )
 
+# print outout :]
 print(printoutput)
+
+# export output to txt file
+#
 # define output folder name
 save_path = 'Analysis'
 # join folder path and file path

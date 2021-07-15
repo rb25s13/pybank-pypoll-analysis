@@ -5,6 +5,7 @@
 # The greatest increase in profits (date and amount) over the entire period
 # The greatest decrease in profits (date and amount) over the entire period
 
+
 # import modules for data path functions and csv read/writing
 import os
 import csv
@@ -70,11 +71,14 @@ printoutput = (f'Financial Analysis\n'
                 f'Total: ${totalrevenue}\n'
                 f'Average Change: ${formattedavg}\n'
                 f'Greatest Increase in Profits: {gimonth} (${greatestincrease})\n'
-                f'Greatest Decrease in Profits: {gdmonth} (${greatestdecrease})'
+                f'Greatest Decrease in Profits: {gdmonth} (${greatestdecrease})\n'
             )
 
 # print define out above
 print(printoutput)
+
+# export output to txt file
+#
 # define output folder name
 save_path = 'Analysis'
 # join folder path and file path
