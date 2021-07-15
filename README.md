@@ -44,7 +44,7 @@
 
 #### PyPoll
 
-(ง ͡ʘ ͜ʖ ͡ʘ)ง		٩(ˊᗜˋ*)و
+(ง ͡ʘ ͜ʖ ͡ʘ)ง&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;٩(ˊᗜˋ*)و
 
 	Create a Python script that analyzes the votes and calculates each of the following:
 		- The total number of votes cast
