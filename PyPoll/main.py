@@ -83,3 +83,13 @@ printoutput = (f'Election Results\n'
 )
 
 print(printoutput)
+# define output folder name
+save_path = 'Analysis'
+# join folder path and file path
+outputdatapath = os.path.join(save_path, 'Poll_Results.txt')
+# open/make the text file named Poll_Results
+file = open(outputdatapath, 'w')
+# write output to the text file
+file.write(f'{printoutput}')
+# close the file
+file.close()
